@@ -117,15 +117,4 @@ Cada figura muestra la comparación entre la trayectoria real, las mediciones ru
 
 ---
 
-## Pruebas y validación
-
-Ejecuta los tests de precisión sobre scripts de movimiento con ruido controlado:
-
-```bash
-pytest tests/test_kf_accuracy.py
-```
-
-Se generan métricas de error medio cuadrático (RMSE) para posición y velocidad.
-
----
 
