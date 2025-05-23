@@ -150,14 +150,3 @@ Se generan métricas de error medio cuadrático (RMSE) para posición y velocida
 
 ---
 
-## Contribuciones y licencias
-
-Este proyecto sigue la licencia MIT. ¡Eres bienvenido a contribuir mediante pull requests!
-
----
-
-## Futuras ampliaciones
-
-- Implementar **EKF** para modelos de observación no lineales (LIDAR, cámara)
-- Integrar **fusión de sensores** (IMU, GPS)
-- Comparar con filtros basados en partículas (PF)
