@@ -33,19 +33,13 @@ p2_kf_pdc/
 │   ├── observation_models.py  # Definición de modelo de observación
 │   ├── sensor_utils.py        # Simulación de ruido y adquisición odométrica
 │   └── visualization.py       # Visualización y guardado de gráficas
-├── graficas/                  # Resultados: trayectorias estimadas
-│   ├── simplified_low_noise.png
-│   ├── simplified_high_measurement_noise.png
-│   ├── simplified_high_process_noise.png
-│   ├── complete_low_noise.png
-│   ├── complete_high_measurement_noise.png
-│   └── complete_high_process_noise.png
-├── launch/                    # Archivos de lanzamiento ROS 2
-│   └── kf_launch.py
-├── tests/                     # Scripts de prueba y validación
-│   └── test_kf_accuracy.py
-├── package.xml
-└── setup.py
+└── graficas/                  # Resultados: trayectorias estimadas
+    ├── simplified_low_noise.png
+    ├── simplified_high_measurement_noise.png
+    ├── simplified_high_process_noise.png
+    ├── complete_low_noise.png
+    ├── complete_high_measurement_noise.png
+    └── complete_high_process_noise.png
 ```
 
 ---
@@ -74,12 +68,6 @@ p2_kf_pdc/
    colcon build --symlink-install
    source install/setup.bash
    ```
-
-3. Instalar dependencias de Python (si no lo has hecho):
-   ```bash
-   pip install -r requirements.txt
-   ```
-
 ---
 
 ## Uso
@@ -110,19 +98,10 @@ ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py slam:=fals
 
 ---
 
-## Parámetros configurables
-
-| Parámetro         | Descripción                                        | Ejemplo                          |
-|-------------------|----------------------------------------------------|----------------------------------|
-| `filter.Q`        | Covarianza del proceso (matriz 3×3 o 5×5)          | `[0.01,0,...;...]`               |
-| `filter.R`        | Covarianza de medición (matriz 3×3)                | `[0.05,0,...;...]`               |
-| `filter.dt`       | Intervalo de tiempo entre predicción y corrección  | `0.1`                            |
-
----
 
 ## Resultados
 
-Las gráficas generadas se guardan automáticamente en `graficas/`. Los archivos disponibles incluyen:
+Las gráficas generadas se guardan en `graficas/`. Los archivos disponibles incluyen:
 
 - **Modelo simplificado**
   - `simplified_low_noise.png`
